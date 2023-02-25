@@ -9,121 +9,155 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="">
-    <main class="bg-neutral-800 text-white py-8 h-[calc(100vh-8rem)] w-full">
+    <main class="bg-neutral-800 text-white py-8 h-[calc(100vh-4rem)] w-full">
       <h1 class="text-5xl text-center">RANDOM USER GENERATOR</h1>
+      <div class="w-full h-full flex justify-center items-center p-4">
+        <div
+          class="md:w-1/2 w-full mx-auto bg-slate-200 text-neutral-900 rounded-md py-8"
+        >
+          <!-- image -->
+          <div id="image" class="w-full relative cursor-pointer z-10">
+            <hr
+              class="w-full border-b border-slate-900 absolute top-1/2 -translate-y-1/2 -z-10"
+            />
+            <div
+              class="w-24 p-1 h-24 rounded-full border-2 border-slate-900 mx-auto bg-slate-50 group relative"
+            >
+              <img
+                id="avatar"
+                src="./img/random.png"
+                alt=""
+                class="w-full h-full rounded-full block border-2 border-slate-900 p-1"
+              />
+              <div
+                id="reload"
+                class="transition-all duration-500 group-hover:visible group-hover:-bottom-6 -bottom-12 text-center invisible absolute left-1/2 -translate-x-1/2 px-4 py-2 opacity-0 group-hover:opacity-100 rounded bg-slate-700"
+              >
+                New
+              </div>
+            </div>
+          </div>
+          <!-- image -->
+
+          <div class="px-4 text-center my-8 space-y-4">
+            <p id="property" class="text-gray-600 text-2xl">
+              My phone number is
+            </p>
+
+            <h2 id="value" class="text-4xl">My phone number is</h2>
+
+            <!-- buttons -->
+            <div id="btnContainer" class="flex justify-center gap-4">
+              <!-- User -->
+              <div
+                data-name="name"
+                data-value="name"
+                class="w-12 h-12 group relative overflow-hidden"
+              >
+                <div
+                  id="selected"
+                  class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
+                >
+                  <div class="text-2xl">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                  </div>
+                  <div class="text-2xl text-green-400">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div
+                data-name="email address"
+                data-value="email"
+                class="w-12 h-12 group relative overflow-hidden"
+              >
+                <div
+                  class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
+                >
+                  <div class="text-2xl">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                  <div class="text-2xl text-green-400">
+                    <i class="fa-regular fa-envelope"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- calender -->
+              <div
+                data-name="birthday"
+                data-value="dob"
+                class="w-12 h-12 group relative overflow-hidden"
+              >
+                <div
+                  class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
+                >
+                  <div class="text-2xl">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                  <div class="text-2xl text-green-400">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- map -->
+              <div
+                data-name="address"
+                data-value="location"
+                class="w-12 h-12 group relative overflow-hidden"
+              >
+                <div
+                  class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
+                >
+                  <div class="text-2xl">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                  <div class="text-2xl text-green-400">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- phone -->
+              <div
+                data-name="phone Number"
+                data-value="phone"
+                class="w-12 h-12 group relative overflow-hidden"
+              >
+                <div
+                  class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
+                >
+                  <div class="text-2xl"><i class="fa-solid fa-phone"></i></div>
+                  <div class="text-2xl text-green-400">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- lock -->
+              <div
+                data-name="password"
+                data-value="login"
+                class="w-12 h-12 group relative overflow-hidden"
+              >
+                <div
+                  class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
+                >
+                  <div class="text-2xl"><i class="fa-solid fa-lock"></i></div>
+                  <div class="text-2xl text-green-400">
+                    <i class="fa-solid fa-lock"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <div
-      class="md:w-1/2 w-full mx-auto -mt-36 bg-slate-200 text-neutral-900 rounded-md py-8"
-    >
-      <!-- image -->
-      <div id="image" class="w-full relative cursor-pointer z-10">
-        <hr
-          class="w-full border-b border-slate-900 absolute top-1/2 -translate-y-1/2 -z-10"
-        />
-        <div
-          class="w-24 p-1 h-24 rounded-full border-2 border-slate-900 mx-auto bg-slate-50 group relative"
-        >
-          <img
-            id="avatar"
-            src="./img/random.png"
-            alt=""
-            class="w-full h-full rounded-full block border-2 border-slate-900 p-1"
-          />
-          <div id="reload"
-            class="transition-all duration-500 group-hover:visible group-hover:-bottom-6 -bottom-12 text-center invisible absolute left-1/2 -translate-x-1/2 px-4 py-2 opacity-0 group-hover:opacity-100 rounded bg-slate-700"
-          >
-            New
-          </div>
-        </div>
-      </div>
-      <!-- image -->
-
-      <div class="px-4 text-center my-8 space-y-4">
-        <p id="property" class="text-gray-600 text-2xl">My phone number is</p>
-
-        <h2 id="value" class="text-4xl">My phone number is</h2>
-        
-        <!-- buttons -->
-        <div id="btnContainer" class="flex justify-center gap-4">
-          <!-- User -->
-          <div  data-name="name" data-value="name" class="w-12 h-12 group relative overflow-hidden">
-            <div id="selected"
-              class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
-            >
-              <div class="text-2xl"><i class="fa-solid fa-user-astronaut"></i></div>
-              <div class="text-2xl text-green-400">
-                <i class="fa-solid fa-user-astronaut"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Email -->
-          <div data-name="email address" data-value="email" class="w-12 h-12 group relative overflow-hidden">
-            <div
-              class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
-            >
-              <div class="text-2xl"><i class="fa-regular fa-envelope"></i></div>
-              <div class="text-2xl text-green-400">
-                <i class="fa-regular fa-envelope"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- calender -->
-          <div data-name="birthday" data-value="dob" class="w-12 h-12 group relative overflow-hidden">
-            <div
-              class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
-            >
-              <div class="text-2xl">
-                <i class="fa-solid fa-calendar-days"></i>
-              </div>
-              <div class="text-2xl text-green-400">
-                <i class="fa-solid fa-calendar-days"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- map -->
-          <div data-name="address" data-value="location" class="w-12 h-12 group relative overflow-hidden">
-            <div
-              class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
-            >
-              <div class="text-2xl">
-                <i class="fa-solid fa-map-location-dot"></i>
-              </div>
-              <div class="text-2xl text-green-400">
-                <i class="fa-solid fa-map-location-dot"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- phone -->
-          <div data-name="phone Number" data-value="phone" class="w-12 h-12 group relative overflow-hidden">
-            <div
-              class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
-            >
-              <div class="text-2xl"><i class="fa-solid fa-phone"></i></div>
-              <div class="text-2xl text-green-400">
-                <i class="fa-solid fa-phone"></i>
-              </div>
-            </div>
-          </div>
-
-          <!-- lock -->
-          <div data-name="password" data-value="login" class="w-12 h-12 group relative overflow-hidden">
-            <div
-              class="transition-all duration-500 absolute w-full h-full group-hover:-top-[calc(100%-0.5rem)] top-2 space-y-4"
-            >
-              <div class="text-2xl"><i class="fa-solid fa-lock"></i></div>
-              <div class="text-2xl text-green-400">
-                <i class="fa-solid fa-lock"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="my-8"></div>
 
     <script
